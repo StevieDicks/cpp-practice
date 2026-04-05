@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug C++11 Exercise (gdb)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/cpp11_fundamentals/bin/${input:cpp11Exercise}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/cpp11_fundamentals",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "cpp11: build all",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "cpp11Exercise",
+            "type": "pickString",
+            "description": "Pick the exercise binary to debug",
+            "options": [
+                "01_class_basics_and_static",
+                "02_constructors_destructors_raii",
+                "03_raw_pointers_and_references",
+                "04_smart_pointers_unique_shared_weak",
+                "05_virtual_functions_and_polymorphism",
+                "06_interfaces_override_final",
+                "07_templates_function_class",
+                "08_stl_string_vector_and_embedded_tradeoffs"
+            ],
+            "default": "01_class_basics_and_static"
+        }
+    ]
+}
