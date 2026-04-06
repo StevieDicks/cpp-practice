@@ -43,8 +43,8 @@ int main() {
     assert(value == 15);
 
     // Reference is an alias. It is always bound to an existing object.
-    int& alias = value;
-    IncrementRequired(alias);
+    int& alias = value;             // Need to look more into aliases
+    IncrementRequired(alias);       // What's a good use for them? Why?
     assert(value == 16);
     assert(&alias == &value);
 

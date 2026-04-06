@@ -27,7 +27,7 @@ private:
     static int live_count_;
 };
 
-int TrackedObject::live_count_ = 0;
+int TrackedObject::live_count_ = 0;         // Why is initializing a private member like this OK?
 
 int main() {
     assert(TrackedObject::live_count() == 0);

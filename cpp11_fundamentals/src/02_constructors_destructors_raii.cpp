@@ -13,9 +13,9 @@
 // heap memory (e.g., mutex, file descriptor, peripheral lock, DMA channel).
 class ScopedBuffer {
 public:
-    explicit ScopedBuffer(std::size_t element_count)
-        : element_count_(element_count)
-        , data_(new int[element_count_]) {
+    explicit ScopedBuffer(std::size_t element_count)    // What is `explicit` keyword?
+        : element_count_(element_count)                 // Note this syntax with the comma,
+        , data_(new int[element_count_]) {              // separating multiple initialization elements
         ++live_buffers_;
 
         // Initialize to known value for predictable test behavior.
