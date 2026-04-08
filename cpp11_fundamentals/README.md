@@ -37,6 +37,18 @@ make run-all
 make clean
 ```
 
+## Quiz Mode
+
+There is also a quiz workspace in `quiz/` with intentionally broken or unfinished
+programs for debugging practice.
+
+```bash
+make quiz-list
+make quiz-build
+make quiz-run Q=01_buggy_shared_ptr_cycle
+make quiz-run Q=02_unfinished_virtual_template_pipeline
+```
+
 ## Expected Behavior
 
 - `make build` compiles all examples with C++11 and warning flags.
